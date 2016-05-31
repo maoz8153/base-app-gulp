@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+
+        <!--      encryptor input     -->
+         <div class=" col-md-6 col-md-offset-3">
+             <div class="panel panel-success ">
+                 <div class="panel-heading text-center"><h2>User List</h2></div>
+                 <div class="panel-body">
+                     <table class="table table-bordered">
+                         <thead>
+                             <tr>
+                                <th class="col-md-1 text-center">image</th>
+                                 <th class="col-md-1 text-center">name</th>
+                                 <th class="col-md-1 text-center">username</th>
+                                 <th class="col-md-1 text-center">email</th>
+                                 <th class="col-md-1 text-center">phone</th>
+                                 <th class="col-md-1 text-center">website</th>
+                             </tr>
+                         </thead>
+
+                         <tbody>
+                             <tr ng-repeat="user in vm.users"  ui-sref="user({userId: user.id, name : user.name})" class="userLine">
+                                <td class="text-center" ><img ng-src="assets/images/{{user.name}}.jpg"></td>
+                                 <td >{{user.name}}</td>
+                                 <td > {{user.username}}</td>
+                                 <td >{{user.email}}</td>
+                                 <td > {{user.phone}}</td>
+                                 <td >{{user.website}}</td>
+                             </tr>
+
+                         </tbody>
+
+                     </table>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+</div>
+

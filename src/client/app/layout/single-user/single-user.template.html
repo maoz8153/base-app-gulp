@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="row">
+
+        <!--      encryptor input     -->
+         <div class=" col-md-6 col-md-offset-3">
+             <div class="panel panel-success ">
+                 <div class="panel-heading">
+                     <span class="span1"><img ng-src="assets/images/{{vm.name}}.jpg"></span>
+                    <h2 class="span3" style="float: right;">{{vm.name}} Post</span>
+                 </div>
+                 <div class="panel-body">
+                     <table class="table table-bordered">
+                         <thead>
+                             <tr>
+                                <th class="col-md-1 text-center">title</th>
+                                 <th class="col-md-1 text-center">body</th>
+                             </tr>
+                         </thead>
+
+                         <tbody>
+                             <tr ng-repeat="post in vm.posts">
+                                 <td ui-sref="user({userId: user.id})">{{post.title}}</td>
+                                 <td> {{post.body}}</td>
+                             </tr>
+
+                         </tbody>
+
+                     </table>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+</div>
+
